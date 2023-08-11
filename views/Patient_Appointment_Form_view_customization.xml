@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_patient_appointment_form_inherit" model="ir.ui.view">
+        <field name="name">patient.appointment.form.inherit</field>
+        <field name="model">patient.appointment</field>
+        <field name="inherit_id" ref="dental_clinic.view_patient_appointment_form"></field>
+        <field name="arch" type="xml">
+            <span class="myAddition" position="replace">
+                    <div class="o_toothChart" style="padding-left: 100px;"/>
+
+                
+
+            </span>
+        </field>
+    </record>
+</odoo>

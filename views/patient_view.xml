@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    
+    
+    <record id="view_patient_patient_tree" model="ir.ui.view">
+        <field name="name">patient.patient.tree</field>
+        <field name="model">patient.patient</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="patient_serial" readonly="1"/>
+                <field name="patient_name"/>
+                <field name="age" readonly="1"/>
+                <field name="gender"/>
+                <field name="blood_type"/>
+                <field name="occupation"/>
+                <field name="marital_status"/>
+            </tree>
+
+        </field>
+    </record>
+
+        <record id="view_patient_patient_form" model="ir.ui.view">
+        <field name="name">patient.patient.form</field>
+        <field name="model">patient.patient</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="patient_serial" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="patient_name"/>
+                            <field name="contact_number"/>
+                            <field name="date_of_birth"/>
+                            <field name="age" readonly="1"/>
+                            <field name="gender"/>
+                            <field name="blood_type"/>
+                        </group>
+
+                        <group>
+                            <field name="occupation"/>
+                            <field name="marital_status"/>
+                        </group>
+                    </group>
+
+    
+                    <notebook>
+                        
+                        <page string="Patient Questionnaire">
+                            <div>
+                                Do you take any anticoagulants?
+                                
+                                
+                            </div>
+                            <div>
+                                <field name="qstn_1"/>
+                            </div>
+                            <field name="qstn_1_note" />
+                            <div>
+                                Do you have any immunological diseases?
+                            </div>
+                            <field name="qstn_2"/>
+                            <div>
+
+                            </div>
+                            <field name="qstn_2_note" attrs="{'invisible': [('qstn_2', '=', 'No')]}" />
+                        </page>
+                        <page string="Medical Alerts">
+                            <div>
+                                <field name="qstn_1_note"/>
+                            </div>
+                            
+
+                            <field name="qstn_2_note" readonly="1"/>
+                        </page>
+                        <page string="Patient Appointments" name="appointment_id">
+                            <field name="appointment_id"/>
+                        </page>
+                        <page string="Patient Prescriptions">
+                            <field name="patient_prescriptions"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+
+        </field>
+    </record>
+
+
+    <record id="action_patient_patient_tree" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">patient.patient</field>
+<!--        <field name="view_id" ref="view_combined_menu_item_tree"/>-->
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- <record id="action_combined_sale_order_form" model="ir.actions.act_window">
+        <field name="name">انشاء امر بيع</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">combined.sale.order</field>
+        <field name="view_id" ref="view_combined_sale_order_form"/>
+        <field name="view_mode">form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                يمكنك انشاء كارت للصنف المراد اضافته لقاعدة البيانات
+            </p>
+            <p>
+                بعد الانتهاء، يمكنك اضافته علي اوردر للعميل
+                <br/>
+                كما يمكنك تغيير البيانات الخاصه بعذا الصنف
+            </p>
+        </field>
+    </record> -->
+
+        <!-- main menu entry that refers to sales part inside the UI -->
+
+    <menuitem id="apt_patient_sub_menu"
+              name="Patients"
+              parent="apt_root"
+              action="action_patient_patient_tree"
+              sequence="32"/>         
+
+
+</odoo>

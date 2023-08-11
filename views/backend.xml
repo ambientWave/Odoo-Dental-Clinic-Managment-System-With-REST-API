@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="assets_backend" name="toothChart assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/dental_clinic/static/src/js/ToothChart.js"/>
+                <link rel="stylesheet" type="text/scss" href="/dental_clinic/static/src/scss/toothChart.scss"/>            </xpath>
+        </template>
+    </data>
+</odoo>

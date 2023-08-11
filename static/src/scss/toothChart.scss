@@ -1,0 +1,13 @@
+.tooth-chart{
+  width:63%;
+}
+.unmarked {
+  fill: white;
+  -webkit-transition:fill .25s;
+  transition:fill .25s;
+}
+.marked {
+  fill: grey;
+  -webkit-transition:fill .25s;
+  transition:fill .25s;
+}

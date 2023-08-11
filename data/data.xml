@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Sequences for menu.item -->
+        <record id="seq_patient_appointment" model="ir.sequence">
+            <field name="name">Appointment Serial</field>
+            <field name="code">patient.appointment.sequence</field> <!-- unique -->
+            <field name="prefix">APT</field>
+            <field name="padding">6</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_patient_appointment_prescription" model="ir.sequence">
+            <field name="name">Appointment Serial</field>
+            <field name="code">patient.appointment.prescription.sequence</field> <!-- unique -->
+            <field name="prefix">PRS</field>
+            <field name="padding">6</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_patient" model="ir.sequence">
+            <field name="name">Patient Serial</field>
+            <field name="code">patient.sequence</field> <!-- unique -->
+            <field name="prefix">PAT</field>
+            <field name="padding">6</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+
+
+    </data>
+</odoo>
