@@ -3,10 +3,6 @@
 ## Screenshots
 
 <picture>
- <img alt="Screenshot1" src="https://raw.githubusercontent.com/ambientWave/Odoo-Dental-Clinic-Managment-System-With-REST-API/main/Image1.png">
-</picture>
-
-<picture>
  <img alt="Screenshot1" src="https://raw.githubusercontent.com/ambientWave/Odoo-Dental-Clinic-Managment-System-With-REST-API/main/Image2.png">
 </picture>
 
@@ -20,4 +16,8 @@
 
 <picture>
  <img alt="Screenshot1" src="https://raw.githubusercontent.com/ambientWave/Odoo-Dental-Clinic-Managment-System-With-REST-API/main/Image5.png">
+</picture>
+
+<picture>
+ <img alt="Screenshot1" src="https://raw.githubusercontent.com/ambientWave/Odoo-Dental-Clinic-Managment-System-With-REST-API/main/Image1.png">
 </picture>
