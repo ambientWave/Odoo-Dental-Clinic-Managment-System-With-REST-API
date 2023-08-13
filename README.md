@@ -1,5 +1,7 @@
 # Odoo-Dental-Clinic-Managment-System-With-REST-API
 
+An odoo project to manage a dental clinic appointments, patients and prescriptions. It features an authentication-based API to login and create new appointments. 
+
 ## Screenshots
 
 <picture>
